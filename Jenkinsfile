@@ -14,6 +14,6 @@ def     integrationTester = [ 'pipeline/integration.groovy' ]
 
 Handlers handlers = new Handlers(packager, deployer, unitTester, staticAnalyser, componentTester, integrationTester) as Handlers
 
-invokePipeline( 'express-demo', handlers, configuration )
+invokePipeline( 'team1-demo-app', handlers, configuration )
 
 
