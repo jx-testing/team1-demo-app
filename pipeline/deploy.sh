@@ -14,3 +14,5 @@ echo "docker-registry-ip-address is $REG_IP"
 
 
 
+
+
