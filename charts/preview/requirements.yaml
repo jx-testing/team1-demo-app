@@ -9,5 +9,5 @@ dependencies:
   repository: https://chartmuseum.build.cd.jenkins-x.io
   version: 2.3.56
 - alias: preview
-  name: express-demo
-  repository: file://../express-demo
+  name: team1-demo-app
+  repository: file://../team1-demo-app
