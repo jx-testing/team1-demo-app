@@ -22,6 +22,7 @@ def run(String targetBranch, String configuration, String application){
                         export REG_IP=$(echo $A | awk -F'=' '{print $2}')
 
                         helm init --client-only
+                        helm delete ${app} --purge
                         helm install ${app} --name $app --set image.repository=${REG_IP}/${app} --set image.tag='latest' --namespace ${POD_NAMESPACE}-staging
 
                         '''
