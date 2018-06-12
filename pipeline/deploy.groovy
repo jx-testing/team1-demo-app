@@ -1,4 +1,4 @@
-def run(String targetBranch, String configuration){  
+def run(String targetBranch, String configuration, String application){  
     
     def type = 'deploy'
     def label = 'jenkins-nodejs'

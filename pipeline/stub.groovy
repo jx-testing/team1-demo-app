@@ -1,4 +1,4 @@
-def runTest(String targetBranch, String configuration){  
+def runTest(String targetBranch, String configuration, String application){  
 
 }
 
