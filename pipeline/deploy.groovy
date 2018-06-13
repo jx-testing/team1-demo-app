@@ -9,7 +9,7 @@ def run(String targetBranch, String configuration, String application){
 
                 // Delete workspace just in case we're on the same node (unstash doesn't overwrite)
                 deleteDir()
-
+                    
                 withEnv([
                     "app=${application}",
                 ]) {
@@ -23,8 +23,7 @@ def run(String targetBranch, String configuration, String application){
 
                         helm init --client-only
 
-                        helm upgrade ${app} ./${app} --install --set image.repository=${REG_IP}:5000/${app} --set image.tag='latest' --namespace ${POD_NAMESPACE}-staging
-
+                
                         '''
                     }
 
@@ -33,7 +32,7 @@ def run(String targetBranch, String configuration, String application){
 
                 
                 try {
-                    //sh 'pipeline/deploy.sh'
+                    sh 'pipeline/deploy.sh'
                 } catch (error) {
                     echo "FAILURE: ${type} failed"
                     echo error.message
