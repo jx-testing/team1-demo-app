@@ -1,6 +1,7 @@
 def runTest(String targetBranch, String configuration, String application){  
     
-    def label = 'jenkins-nodejs'
+    //def label = 'jenkins-nodejs'
+    def label = 'jenkins-meteor'
 
     podTemplate(label: label) {
         node(label) {
